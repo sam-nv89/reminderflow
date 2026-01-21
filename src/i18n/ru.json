@@ -1,0 +1,315 @@
+{
+    "common": {
+        "appName": "ReminderFlow",
+        "loading": "Загрузка...",
+        "save": "Сохранить",
+        "cancel": "Отмена",
+        "delete": "Удалить",
+        "edit": "Редактировать",
+        "add": "Добавить",
+        "search": "Поиск",
+        "filter": "Фильтр",
+        "export": "Экспорт",
+        "back": "Назад",
+        "next": "Далее",
+        "submit": "Отправить",
+        "confirm": "Подтвердить",
+        "close": "Закрыть",
+        "yes": "Да",
+        "no": "Нет",
+        "or": "или",
+        "and": "и"
+    },
+    "nav": {
+        "dashboard": "Главная",
+        "appointments": "Записи",
+        "reminders": "Напоминания",
+        "templates": "Шаблоны",
+        "integrations": "Интеграции",
+        "settings": "Настройки",
+        "billing": "Оплата",
+        "help": "Помощь"
+    },
+    "auth": {
+        "login": "Войти",
+        "register": "Регистрация",
+        "logout": "Выйти",
+        "email": "Email",
+        "password": "Пароль",
+        "confirmPassword": "Подтвердите пароль",
+        "forgotPassword": "Забыли пароль?",
+        "resetPassword": "Сбросить пароль",
+        "businessName": "Название компании",
+        "noAccount": "Нет аккаунта?",
+        "hasAccount": "Уже есть аккаунт?",
+        "continueWithGoogle": "Продолжить с Google",
+        "loginTitle": "С возвращением",
+        "loginSubtitle": "Войдите в свой аккаунт",
+        "registerTitle": "Создайте аккаунт",
+        "registerSubtitle": "Начните сокращать неявки уже сегодня",
+        "errors": {
+            "invalidEmail": "Пожалуйста, введите корректный email",
+            "passwordTooShort": "Пароль должен содержать минимум 8 символов",
+            "passwordMismatch": "Пароли не совпадают",
+            "invalidCredentials": "Неверный email или пароль",
+            "emailInUse": "Этот email уже зарегистрирован"
+        }
+    },
+    "onboarding": {
+        "title": "Настроим ваш аккаунт",
+        "step1Title": "Подключите календарь",
+        "step1Subtitle": "Синхронизируйте записи автоматически",
+        "step2Title": "Настройте напоминания",
+        "step2Subtitle": "Выберите когда и как уведомлять клиентов",
+        "step3Title": "Персонализируйте сообщения",
+        "step3Subtitle": "Настройте шаблоны напоминаний",
+        "connectGoogle": "Подключить Google Календарь",
+        "skipForNow": "Пропустить",
+        "finish": "Завершить настройку"
+    },
+    "dashboard": {
+        "title": "Главная",
+        "welcome": "С возвращением, {{name}}!",
+        "todayOverview": "Обзор за сегодня",
+        "upcomingAppointments": "Ближайшие записи",
+        "recentActivity": "Последняя активность",
+        "stats": {
+            "totalAppointments": "Всего записей",
+            "remindersSent": "Отправлено напоминаний",
+            "confirmationRate": "Подтверждения",
+            "noShowRate": "Неявки",
+            "smsUsed": "SMS использовано",
+            "thisMonth": "В этом месяце",
+            "vsLastMonth": "к прошлому месяцу"
+        },
+        "noAppointments": "Нет предстоящих записей",
+        "noActivity": "Нет недавней активности"
+    },
+    "appointments": {
+        "title": "Записи",
+        "upcoming": "Предстоящие",
+        "past": "Прошедшие",
+        "all": "Все",
+        "addNew": "Добавить запись",
+        "clientName": "Имя клиента",
+        "clientPhone": "Номер телефона",
+        "clientEmail": "Email",
+        "service": "Услуга",
+        "dateTime": "Дата и время",
+        "duration": "Длительность",
+        "notes": "Заметки",
+        "status": {
+            "scheduled": "Запланировано",
+            "confirmed": "Подтверждено",
+            "cancelled": "Отменено",
+            "completed": "Завершено",
+            "noShow": "Неявка"
+        },
+        "actions": {
+            "confirm": "Подтвердить",
+            "cancel": "Отменить запись",
+            "complete": "Завершить",
+            "noShow": "Отметить неявку",
+            "sendReminder": "Отправить напоминание"
+        },
+        "empty": {
+            "title": "Записей пока нет",
+            "description": "Подключите календарь или добавьте записи вручную"
+        }
+    },
+    "reminders": {
+        "title": "Напоминания",
+        "history": "История напоминаний",
+        "scheduled": "Запланированные",
+        "sent": "Отправленные",
+        "failed": "Ошибки",
+        "channel": {
+            "sms": "SMS",
+            "email": "Email",
+            "whatsapp": "WhatsApp"
+        },
+        "status": {
+            "pending": "Ожидает",
+            "sent": "Отправлено",
+            "delivered": "Доставлено",
+            "failed": "Ошибка"
+        },
+        "response": {
+            "confirmed": "Подтверждено",
+            "cancelled": "Отменено",
+            "rescheduled": "Перенесено",
+            "noResponse": "Без ответа"
+        }
+    },
+    "settings": {
+        "title": "Настройки",
+        "general": "Общие",
+        "reminders": "Напоминания",
+        "notifications": "Уведомления",
+        "account": "Аккаунт",
+        "businessName": "Название компании",
+        "timezone": "Часовой пояс",
+        "language": "Язык",
+        "theme": "Тема",
+        "themes": {
+            "light": "Светлая",
+            "dark": "Тёмная",
+            "system": "Системная"
+        },
+        "reminderSettings": {
+            "title": "Настройки напоминаний",
+            "intervals": "Интервалы напоминаний",
+            "addInterval": "Добавить интервал",
+            "hoursLabel": "часов до записи",
+            "channels": "Каналы уведомлений",
+            "enableSms": "Включить SMS",
+            "enableEmail": "Включить Email",
+            "enableWhatsapp": "Включить WhatsApp",
+            "defaultTemplate": "Шаблон сообщения по умолчанию",
+            "templateHint": "Используйте {{client_name}}, {{service}}, {{date}}, {{time}} как переменные"
+        },
+        "saved": "Настройки сохранены"
+    },
+    "templates": {
+        "title": "Шаблоны сообщений",
+        "default": "Шаблон по умолчанию",
+        "custom": "Пользовательские шаблоны",
+        "addNew": "Добавить шаблон",
+        "name": "Название шаблона",
+        "content": "Текст сообщения",
+        "preview": "Предпросмотр",
+        "variables": "Доступные переменные",
+        "variablesList": {
+            "clientName": "Имя клиента",
+            "service": "Название услуги",
+            "date": "Дата записи",
+            "time": "Время записи",
+            "businessName": "Название вашей компании"
+        }
+    },
+    "integrations": {
+        "title": "Интеграции",
+        "calendars": "Интеграции календарей",
+        "connected": "Подключено",
+        "notConnected": "Не подключено",
+        "connect": "Подключить",
+        "disconnect": "Отключить",
+        "lastSync": "Последняя синхронизация",
+        "syncNow": "Синхронизировать",
+        "google": {
+            "title": "Google Календарь",
+            "description": "Синхронизация записей из Google Календаря"
+        },
+        "calendly": {
+            "title": "Calendly",
+            "description": "Импорт бронирований из Calendly"
+        },
+        "outlook": {
+            "title": "Microsoft Outlook",
+            "description": "Подключите календарь Outlook"
+        }
+    },
+    "billing": {
+        "title": "Оплата и подписка",
+        "currentPlan": "Текущий план",
+        "usage": "Использование",
+        "smsUsage": "Использование SMS",
+        "of": "из",
+        "remaining": "осталось",
+        "upgradeTitle": "Улучшить план",
+        "upgradeSubtitle": "Получите больше SMS и премиум функции",
+        "plans": {
+            "free": "Бесплатный",
+            "starter": "Стартовый",
+            "business": "Бизнес",
+            "enterprise": "Корпоративный"
+        },
+        "features": {
+            "smsPerMonth": "SMS в месяц",
+            "unlimitedEmails": "Безлимитные email",
+            "unlimitedWhatsapp": "Безлимитный WhatsApp",
+            "calendarSync": "Синхронизация календаря",
+            "analytics": "Аналитика",
+            "customTemplates": "Свои шаблоны",
+            "prioritySupport": "Приоритетная поддержка",
+            "teamAccess": "Доступ команды",
+            "apiAccess": "Доступ к API"
+        },
+        "currentPlanLabel": "Текущий план",
+        "mostPopular": "Популярный",
+        "selectPlan": "Выбрать план",
+        "manageBilling": "Управление оплатой",
+        "cancelSubscription": "Отменить подписку"
+    },
+    "errors": {
+        "generic": "Что-то пошло не так. Попробуйте ещё раз.",
+        "network": "Ошибка сети. Проверьте подключение.",
+        "unauthorized": "Пожалуйста, войдите в систему.",
+        "notFound": "Страница не найдена.",
+        "serverError": "Ошибка сервера. Попробуйте позже."
+    },
+    "landing": {
+        "hero": {
+            "title": "Сократите неявки на 80%",
+            "subtitle": "Автоматические напоминания о записях через SMS, Email и WhatsApp. Больше никаких потерянных клиентов.",
+            "cta": "Попробовать бесплатно",
+            "secondaryCta": "Как это работает"
+        },
+        "features": {
+            "title": "Всё что нужно для сокращения неявок",
+            "subtitle": "Просто, эффективно, доступно",
+            "multiChannel": {
+                "title": "Мульти-канальные напоминания",
+                "description": "Отправляйте уведомления через SMS, Email или WhatsApp по выбору клиента"
+            },
+            "calendarSync": {
+                "title": "Синхронизация календаря",
+                "description": "Автоматический импорт записей из Google Календаря"
+            },
+            "customizable": {
+                "title": "Персонализация сообщений",
+                "description": "Настройте шаблоны под свой бренд"
+            },
+            "analytics": {
+                "title": "Умная аналитика",
+                "description": "Отслеживайте подтверждения и сокращайте неявки"
+            },
+            "confirmation": {
+                "title": "Простое подтверждение",
+                "description": "Клиенты подтверждают или отменяют простым ответом"
+            },
+            "affordable": {
+                "title": "Доступные цены",
+                "description": "Планы от $19/месяц, есть бесплатный тариф"
+            }
+        },
+        "pricing": {
+            "title": "Простое и прозрачное ценообразование",
+            "subtitle": "Выберите план для вашего бизнеса",
+            "perMonth": "/месяц"
+        },
+        "testimonials": {
+            "title": "Нам доверяют 1000+ компаний",
+            "subtitle": "Отзывы наших клиентов"
+        },
+        "cta": {
+            "title": "Готовы сократить неявки?",
+            "subtitle": "Начните бесплатный период сегодня. Карта не нужна.",
+            "button": "Начать бесплатно"
+        },
+        "footer": {
+            "product": "Продукт",
+            "company": "Компания",
+            "legal": "Правовая информация",
+            "features": "Возможности",
+            "pricing": "Цены",
+            "integrations": "Интеграции",
+            "about": "О нас",
+            "contact": "Контакты",
+            "blog": "Блог",
+            "privacy": "Политика конфиденциальности",
+            "terms": "Условия использования",
+            "copyright": "© 2024 ReminderFlow. Все права защищены."
+        }
+    }
+}
