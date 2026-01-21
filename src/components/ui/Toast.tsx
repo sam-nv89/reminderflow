@@ -1,9 +1,9 @@
 import React from 'react';
-import { X, CheckCircle, AlertCircle, AlertTriangle, Info } from 'lucide-react';
+import { X, CheckCircle, AlertCircle, AlertTriangle, Info, LucideIcon } from 'lucide-react';
 import { useToastStore } from '../../stores';
 import { ToastType } from '../../types';
 
-const iconMap: Record<ToastType, React.FC<{ size?: number }>> = {
+const iconMap: Record<ToastType, LucideIcon> = {
     success: CheckCircle,
     error: AlertCircle,
     warning: AlertTriangle,
@@ -18,10 +18,10 @@ export const ToastContainer: React.FC = () => {
     return (
         <div className="toast-container">
             {toasts.map((toast) => {
-                const Icon = iconMap[toast.type];
+                const IconComponent = iconMap[toast.type];
                 return (
                     <div key={toast.id} className={`toast toast-${toast.type}`}>
-                        <Icon size={20} />
+                        <IconComponent size={20} />
                         <span className="flex-1">{toast.message}</span>
                         <button
                             className="btn-ghost p-xs rounded-md"

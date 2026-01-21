@@ -257,7 +257,7 @@ export const db = {
 
     // Reminders
     reminders: {
-        async list(businessId: string, options?: {
+        async list(options?: {
             status?: string;
             limit?: number;
         }) {

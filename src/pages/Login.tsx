@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Zap, Mail, Lock, Eye, EyeOff } from 'lucide-react';
-import { Button, Input } from '../components/ui';
+import { Button } from '../components/ui';
 import { signInWithEmail, signInWithGoogle } from '../services/supabase';
 import { toast } from '../stores';
 
@@ -50,7 +50,7 @@ export const Login: React.FC = () => {
             } else {
                 navigate('/dashboard');
             }
-        } catch (err) {
+        } catch {
             toast.error(t('errors.generic'));
         } finally {
             setIsLoading(false);
@@ -63,7 +63,7 @@ export const Login: React.FC = () => {
             if (error) {
                 toast.error(t('errors.generic'));
             }
-        } catch (err) {
+        } catch {
             toast.error(t('errors.generic'));
         }
     };

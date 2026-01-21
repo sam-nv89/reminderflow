@@ -12,13 +12,14 @@ import {
     HelpCircle,
     LogOut,
     Zap,
+    LucideIcon,
 } from 'lucide-react';
 import { useAuthStore } from '../../stores';
 
 interface NavItem {
     path: string;
     labelKey: string;
-    icon: React.FC<{ size?: number }>;
+    icon: LucideIcon;
 }
 
 const mainNavItems: NavItem[] = [
@@ -61,31 +62,37 @@ export const Sidebar: React.FC = () => {
                 {/* Main Navigation */}
                 <div className="nav-section">
                     <span className="nav-section-title">Menu</span>
-                    {mainNavItems.map((item) => (
-                        <NavLink
-                            key={item.path}
-                            to={item.path}
-                            className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
-                        >
-                            <item.icon size={20} />
-                            <span>{t(item.labelKey)}</span>
-                        </NavLink>
-                    ))}
+                    {mainNavItems.map((item) => {
+                        const IconComponent = item.icon;
+                        return (
+                            <NavLink
+                                key={item.path}
+                                to={item.path}
+                                className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
+                            >
+                                <IconComponent size={20} />
+                                <span>{t(item.labelKey)}</span>
+                            </NavLink>
+                        );
+                    })}
                 </div>
 
                 {/* Settings Navigation */}
                 <div className="nav-section">
                     <span className="nav-section-title">{t('settings.title')}</span>
-                    {settingsNavItems.map((item) => (
-                        <NavLink
-                            key={item.path}
-                            to={item.path}
-                            className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
-                        >
-                            <item.icon size={20} />
-                            <span>{t(item.labelKey)}</span>
-                        </NavLink>
-                    ))}
+                    {settingsNavItems.map((item) => {
+                        const IconComponent = item.icon;
+                        return (
+                            <NavLink
+                                key={item.path}
+                                to={item.path}
+                                className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
+                            >
+                                <IconComponent size={20} />
+                                <span>{t(item.labelKey)}</span>
+                            </NavLink>
+                        );
+                    })}
                 </div>
             </nav>
 

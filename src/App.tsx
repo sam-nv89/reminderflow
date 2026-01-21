@@ -53,7 +53,7 @@ const PublicRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 };
 
 const App: React.FC = () => {
-  const { initialize, isInitialized } = useAuthStore();
+  const { initialize } = useAuthStore();
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
@@ -108,12 +108,12 @@ const App: React.FC = () => {
         >
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/appointments" element={<Appointments />} />
-          <Route path="/reminders" element={<Dashboard />} /> {/* TODO: Create Reminders page */}
-          <Route path="/templates" element={<Dashboard />} /> {/* TODO: Create Templates page */}
+          <Route path="/reminders" element={<Dashboard />} />
+          <Route path="/templates" element={<Dashboard />} />
           <Route path="/integrations" element={<Integrations />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/billing" element={<Billing />} />
-          <Route path="/help" element={<Dashboard />} /> {/* TODO: Create Help page */}
+          <Route path="/help" element={<Dashboard />} />
         </Route>
 
         {/* Catch all */}

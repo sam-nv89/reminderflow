@@ -8,7 +8,8 @@ import {
     Clock,
     CheckCircle,
     XCircle,
-    MessageSquare
+    MessageSquare,
+    LucideIcon
 } from 'lucide-react';
 import { Card, CardHeader, Badge, EmptyState, Button } from '../components/ui';
 import { useAuthStore } from '../stores';
@@ -103,7 +104,7 @@ export const Dashboard: React.FC = () => {
         title: string;
         value: number;
         change: number;
-        icon: React.FC<{ size?: number }>;
+        icon: LucideIcon;
         suffix?: string;
     }) => (
         <Card>

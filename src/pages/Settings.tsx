@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Save, Globe, Sun, Moon, Monitor, Building, Clock } from 'lucide-react';
-import { Card, CardHeader, Button, Input, Toggle } from '../components/ui';
+import { Card, CardHeader, Button, Toggle } from '../components/ui';
 import { useAuthStore, toast } from '../stores';
 
 export const Settings: React.FC = () => {
@@ -40,7 +40,6 @@ export const Settings: React.FC = () => {
     ];
 
     const handleSave = () => {
-        // In real app, this would save to Supabase
         toast.success(t('settings.saved'));
     };
 
