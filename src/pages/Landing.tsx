@@ -107,10 +107,7 @@ export const Landing: React.FC = () => {
             </section>
 
             {/* Features Section */}
-            <section
-                className="p-3xl"
-                style={{ background: 'var(--color-bg-secondary)' }}
-            >
+            <section className="landing-section landing-section-alt">
                 <div style={{ maxWidth: 1200, margin: '0 auto' }}>
                     <div className="text-center mb-2xl">
                         <h2 className="text-3xl font-bold mb-md">{t('landing.features.title')}</h2>
@@ -119,26 +116,14 @@ export const Landing: React.FC = () => {
 
                     <div className="grid grid-cols-3 gap-lg">
                         {features.map((feature, index) => (
-                            <div
-                                key={index}
-                                className="card card-hover p-xl text-center"
-                            >
-                                <div
-                                    className="flex items-center justify-center mx-auto mb-lg"
-                                    style={{
-                                        width: 64,
-                                        height: 64,
-                                        background: 'var(--color-primary-light)',
-                                        borderRadius: 'var(--radius-xl)',
-                                        color: 'var(--color-primary)'
-                                    }}
-                                >
-                                    <feature.icon size={28} />
+                            <div key={index} className="feature-card">
+                                <div className="feature-card-icon">
+                                    <feature.icon size={32} />
                                 </div>
-                                <h3 className="text-lg font-semibold mb-sm">
+                                <h3 className="feature-card-title">
                                     {t(`${feature.titleKey}.title`)}
                                 </h3>
-                                <p className="text-secondary">
+                                <p className="feature-card-description">
                                     {t(`${feature.titleKey}.description`)}
                                 </p>
                             </div>
@@ -148,40 +133,36 @@ export const Landing: React.FC = () => {
             </section>
 
             {/* Pricing Section */}
-            <section className="p-3xl">
+            <section className="landing-section">
                 <div style={{ maxWidth: 1200, margin: '0 auto' }}>
                     <div className="text-center mb-2xl">
                         <h2 className="text-3xl font-bold mb-md">{t('landing.pricing.title')}</h2>
                         <p className="text-lg text-secondary">{t('landing.pricing.subtitle')}</p>
                     </div>
 
-                    <div className="grid grid-cols-4 gap-lg">
+                    <div className="pricing-grid">
                         {PLANS.map((plan, index) => (
                             <div
                                 key={plan.id}
-                                className={`card p-xl ${index === 2 ? 'border-2' : ''}`}
-                                style={index === 2 ? { borderColor: 'var(--color-primary)' } : {}}
+                                className={`pricing-card ${index === 2 ? 'pricing-card-featured' : ''}`}
                             >
                                 {index === 2 && (
-                                    <div
-                                        className="badge badge-primary mb-md"
-                                        style={{ display: 'inline-flex' }}
-                                    >
+                                    <span className="pricing-card-badge">
                                         {t('billing.mostPopular')}
-                                    </div>
+                                    </span>
                                 )}
 
-                                <h3 className="text-xl font-semibold mb-sm">{plan.name}</h3>
+                                <h3 className="pricing-card-name">{plan.name}</h3>
 
-                                <div className="flex items-baseline gap-xs mb-lg">
-                                    <span className="text-4xl font-bold">${plan.price}</span>
-                                    <span className="text-secondary">{t('landing.pricing.perMonth')}</span>
+                                <div className="pricing-card-price">
+                                    <span className="pricing-card-price-value">${plan.price}</span>
+                                    <span className="pricing-card-price-period">{t('landing.pricing.perMonth')}</span>
                                 </div>
 
-                                <ul className="flex flex-col gap-sm mb-xl">
+                                <ul className="pricing-card-features">
                                     {plan.features.map((feature, i) => (
-                                        <li key={i} className="flex items-center gap-sm text-sm">
-                                            <Check size={16} className="text-success" />
+                                        <li key={i}>
+                                            <Check size={16} />
                                             <span>{feature}</span>
                                         </li>
                                     ))}
@@ -202,48 +183,26 @@ export const Landing: React.FC = () => {
             </section>
 
             {/* CTA Section */}
-            <section
-                className="p-3xl text-center"
-                style={{
-                    background: 'var(--color-primary-gradient)',
-                    color: 'white'
-                }}
-            >
-                <div style={{ maxWidth: 600, margin: '0 auto' }}>
-                    <h2 className="text-3xl font-bold mb-md" style={{ color: 'white' }}>
+            <section className="landing-cta">
+                <div className="landing-cta-content">
+                    <h2 className="landing-cta-title">
                         {t('landing.cta.title')}
                     </h2>
-                    <p className="text-lg mb-xl" style={{ opacity: 0.9 }}>
+                    <p className="landing-cta-subtitle">
                         {t('landing.cta.subtitle')}
                     </p>
                     <Link to="/register">
-                        <Button
-                            variant="secondary"
-                            size="lg"
-                            style={{
-                                background: 'white',
-                                color: 'var(--color-primary)'
-                            }}
-                        >
+                        <button className="landing-cta-btn">
                             {t('landing.cta.button')}
                             <ArrowRight size={18} />
-                        </Button>
+                        </button>
                     </Link>
                 </div>
             </section>
 
             {/* Footer */}
-            <footer
-                className="p-xl"
-                style={{
-                    background: 'var(--color-bg-secondary)',
-                    borderTop: '1px solid var(--color-border)'
-                }}
-            >
-                <div
-                    className="flex justify-between items-center"
-                    style={{ maxWidth: 1200, margin: '0 auto' }}
-                >
+            <footer className="landing-footer">
+                <div className="landing-footer-content">
                     <div className="flex items-center gap-sm">
                         <div className="sidebar-logo-icon" style={{ width: 32, height: 32 }}>
                             <Zap size={18} />
@@ -255,10 +214,10 @@ export const Landing: React.FC = () => {
                         {t('landing.footer.copyright')}
                     </p>
 
-                    <div className="flex gap-lg text-sm">
-                        <a href="#" className="text-secondary">{t('landing.footer.privacy')}</a>
-                        <a href="#" className="text-secondary">{t('landing.footer.terms')}</a>
-                        <a href="#" className="text-secondary">{t('landing.footer.contact')}</a>
+                    <div className="landing-footer-links">
+                        <a href="#">{t('landing.footer.privacy')}</a>
+                        <a href="#">{t('landing.footer.terms')}</a>
+                        <a href="#">{t('landing.footer.contact')}</a>
                     </div>
                 </div>
             </footer>
